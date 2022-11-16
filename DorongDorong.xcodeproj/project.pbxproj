@@ -12,6 +12,7 @@
 		C4A9FED52924B68500BCC8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED42924B68500BCC8CF /* Assets.xcassets */; };
 		C4A9FED82924B68500BCC8CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED72924B68500BCC8CF /* Preview Assets.xcassets */; };
 		C4A9FF002925611D00BCC8CF /* JejuSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FEFF2925611D00BCC8CF /* JejuSoundView.swift */; };
+		C4A9FF062925726B00BCC8CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FF052925726B00BCC8CF /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		C4A9FED42924B68500BCC8CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4A9FED72924B68500BCC8CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C4A9FEFF2925611D00BCC8CF /* JejuSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuSoundView.swift; sourceTree = "<group>"; };
+		C4A9FF052925726B00BCC8CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */,
+				C4A9FF032925724100BCC8CF /* Configuration */,
 				C4A9FEFD292560C700BCC8CF /* Source */,
 				C4A9FED42924B68500BCC8CF /* Assets.xcassets */,
 				C4A9FED62924B68500BCC8CF /* Preview Content */,
@@ -82,8 +85,25 @@
 			children = (
 				C4A9FED22924B68300BCC8CF /* ContentView.swift */,
 				C4A9FEFF2925611D00BCC8CF /* JejuSoundView.swift */,
+				C4A9FF01292571F100BCC8CF /* CustomTabView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C4A9FF032925724100BCC8CF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C4A9FF042925724F00BCC8CF /* Constants */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C4A9FF042925724F00BCC8CF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C4A9FF052925726B00BCC8CF /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4A9FF062925726B00BCC8CF /* Constants.swift in Sources */,
 				C4A9FF002925611D00BCC8CF /* JejuSoundView.swift in Sources */,
 				C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */,
 				C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */,
