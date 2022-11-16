@@ -53,6 +53,22 @@ struct CustomTabView: View {
 	}
 }
 
+//MARK: - TabButton
+struct TabButton: View {
+	//MARK: Property
+	let isSelection: Bool // 현재 Tab
+	let systemName: String // 선택되었을때
+	let systemNameByNotSelected: String // 선택되지 않았을때
+	
+	var body: some View {
+		VStack{
+			Image(systemName: isSelection ? systemName : systemNameByNotSelected)
+				.font(.system(size: 24))
+				.padding(.vertical, 17)
+				.foregroundColor(isSelection ? .white : .gray)
+			Spacer()
+		}
+	}
 }
 
 struct CustomTabView_Previews: PreviewProvider {
