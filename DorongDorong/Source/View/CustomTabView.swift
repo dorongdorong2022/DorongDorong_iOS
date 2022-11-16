@@ -18,10 +18,10 @@ struct CustomTabView: View {
 	@Binding var selection: Tab
 	
 	var body: some View {
-		ZStack{
+		ZStack {
 			HStack(alignment: .center, spacing: 8) {
 				ForEach(0..<3) { index in
-					Spacer().frame(width: Screen.maxWidth * 0.05)
+					Spacer().frame(width: Screen.maxWidth * 0.08)
 					
 					Button {
 						switch index {
@@ -32,23 +32,20 @@ struct CustomTabView: View {
 						}
 					} label: {
 						switch index {
-						case 0: TabButton(isSelection: selection == .sound, systemName: "leaf.fill", systemNameByNotSelected: "leaf")
-						case 1: TabButton(isSelection: selection == .tale, systemName: "book.fill", systemNameByNotSelected: "book")
-						case 2: TabButton(isSelection: selection == .tts, systemName: "mic.fill", systemNameByNotSelected: "mic")
-						default: TabButton(isSelection: selection == .sound, systemName: "leaf.fill", systemNameByNotSelected: "leaf")
+						case 0: TabButton(isSelection: selection == .sound, name: "제주소리", systemName: "leaf.fill", systemNameByNotSelected: "leaf")
+						case 1: TabButton(isSelection: selection == .tale, name: "제주설화", systemName: "book.fill", systemNameByNotSelected: "book")
+						default: TabButton(isSelection: selection == .tts, name: "보이스", systemName: "mic.fill", systemNameByNotSelected: "mic")
 						}
 					}
 					
-					Spacer().frame(width: Screen.maxWidth * 0.05)
+					Spacer().frame(width: Screen.maxWidth * 0.08)
 				} // HStack
 				.frame(height: Screen.maxHeight * 0.11 - 5)
-				.ignoresSafeArea(.keyboard)
 				.edgesIgnoringSafeArea(.all)
 			} // ZStack
 			.frame(width: Screen.maxWidth)
 			.background(Color(red: 0, green: 0, blue: 0, opacity: 0.3)) // 반투명
 		}
-		.ignoresSafeArea(.keyboard)
 		.edgesIgnoringSafeArea([.bottom])
 	}
 }
@@ -56,18 +53,21 @@ struct CustomTabView: View {
 //MARK: - TabButton
 struct TabButton: View {
 	//MARK: Property
-	let isSelection: Bool // 현재 Tab
-	let systemName: String // 선택되었을때
+	let isSelection: Bool 	// 현재 Tab
+	let name: String		// Tab 이름
+	let systemName: String 	// 선택되었을때
 	let systemNameByNotSelected: String // 선택되지 않았을때
 	
 	var body: some View {
-		VStack{
+		VStack(spacing: 5) {
 			Image(systemName: isSelection ? systemName : systemNameByNotSelected)
 				.font(.system(size: 24))
-				.padding(.vertical, 17)
-				.foregroundColor(isSelection ? .white : .gray)
+			Text(name)
+				.font(.system(size: 11))
 			Spacer()
 		}
+		.padding(.vertical, 17)
+		.foregroundColor(isSelection ? .white : .gray)
 	}
 }
 
