@@ -86,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				C4A9FED22924B68300BCC8CF /* ContentView.swift */,
-				C4A9FEFF2925611D00BCC8CF /* JejuSoundView.swift */,
 				C4A9FF01292571F100BCC8CF /* CustomTabView.swift */,
+				C4A9FEFF2925611D00BCC8CF /* JejuSoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
