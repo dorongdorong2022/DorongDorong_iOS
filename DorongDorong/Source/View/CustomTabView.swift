@@ -14,11 +14,49 @@ enum Tab {
 }
 
 struct CustomTabView: View {
+	//MARK: Property Wrapper
+	@Binding var selection: Tab
+	
+	var body: some View {
+		ZStack{
+			HStack(alignment: .center, spacing: 8) {
+				ForEach(0..<3) { index in
+					Spacer().frame(width: Screen.maxWidth * 0.05)
+					
+					Button {
+						switch index {
+						case 0: selection = .sound
+						case 1: selection = .tale
+						case 2: selection = .tts
+						default: selection = .sound
+						}
+					} label: {
+						switch index {
+						case 0: TabButton(isSelection: selection == .sound, systemName: "leaf.fill", systemNameByNotSelected: "leaf")
+						case 1: TabButton(isSelection: selection == .tale, systemName: "book.fill", systemNameByNotSelected: "book")
+						case 2: TabButton(isSelection: selection == .tts, systemName: "mic.fill", systemNameByNotSelected: "mic")
+						default: TabButton(isSelection: selection == .sound, systemName: "leaf.fill", systemNameByNotSelected: "leaf")
+						}
+					}
+					
+					Spacer().frame(width: Screen.maxWidth * 0.05)
+				} // HStack
+				.frame(height: Screen.maxHeight * 0.11 - 5)
+				.ignoresSafeArea(.keyboard)
+				.edgesIgnoringSafeArea(.all)
+			} // ZStack
+			.frame(width: Screen.maxWidth)
+			.background(Color(red: 0, green: 0, blue: 0, opacity: 0.3)) // 반투명
+		}
+		.ignoresSafeArea(.keyboard)
+		.edgesIgnoringSafeArea([.bottom])
+	}
+}
 
 }
 
 struct CustomTabView_Previews: PreviewProvider {
 	static var previews: some View {
-		CustomTabView()
+		CustomTabView(selection: .constant(.sound))
 	}
 }
