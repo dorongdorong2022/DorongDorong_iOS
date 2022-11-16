@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+enum Tab {
+	case sound
+	case tale
+	case tts
+}
+
 struct CustomTabView: View {
 
 }
