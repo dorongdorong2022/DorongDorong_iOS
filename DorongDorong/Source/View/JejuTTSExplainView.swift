@@ -51,16 +51,14 @@ struct JejuTTSExplainView: View {
 					} // VStack
 				} // ScrollView
 				
-				Button {
-					
-				} label: {
+				NavigationLink(destination: JejuTTSRegisterView()){
 					Text("녹음 시작하기")
 						.font(.custom("Pretendard-SemiBold", size: 16))
 						.foregroundColor(.white)
+						.frame(width: Screen.maxWidth-(widthPadding*2), height: Screen.maxHeight*0.08)
+						.background(Color("violet"))
+						.cornerRadius(10)
 				}
-				.frame(width: Screen.maxWidth-(widthPadding*2), height: Screen.maxHeight*0.08)
-				.background(Color("violet"))
-				.cornerRadius(10)
 			} // VStack
 			.padding(24)
 			.padding(.bottom, geometry.safeAreaInsets.bottom + Screen.maxHeight * 0.11 - 5)
@@ -68,7 +66,7 @@ struct JejuTTSExplainView: View {
 	}
 }
 
-struct JejuTTSRegisterView_Previews: PreviewProvider {
+struct JejuTTSExplain_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
 			ZStack {

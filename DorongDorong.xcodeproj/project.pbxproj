@@ -29,6 +29,7 @@
 		C4553DA8292628F6005400AA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DA7292628F6005400AA /* LoginViewModel.swift */; };
 		C4553DAA292629FF005400AA /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DA9292629FF005400AA /* Response.swift */; };
 		C4553DAC29264A72005400AA /* JejuTTSExplainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DAB29264A72005400AA /* JejuTTSExplainView.swift */; };
+		C4553DAE2926552D005400AA /* JejuTTSRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DAD2926552D005400AA /* JejuTTSRegisterView.swift */; };
 		C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */; };
 		C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED22924B68300BCC8CF /* ContentView.swift */; };
 		C4A9FED52924B68500BCC8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED42924B68500BCC8CF /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		C4553DA7292628F6005400AA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C4553DA9292629FF005400AA /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C4553DAB29264A72005400AA /* JejuTTSExplainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTTSExplainView.swift; sourceTree = "<group>"; };
+		C4553DAD2926552D005400AA /* JejuTTSRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTTSRegisterView.swift; sourceTree = "<group>"; };
 		C4A9FECD2924B68300BCC8CF /* DorongDorong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DorongDorong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorongDorongApp.swift; sourceTree = "<group>"; };
 		C4A9FED22924B68300BCC8CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				C4553D5F2925CFE5005400AA /* JejuTaleView.swift */,
 				C4553D612925EC53005400AA /* JejuTaleVoiceView.swift */,
 				C4553DAB29264A72005400AA /* JejuTTSExplainView.swift */,
+				C4553DAD2926552D005400AA /* JejuTTSRegisterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				C4553DA8292628F6005400AA /* LoginViewModel.swift in Sources */,
 				C4553D622925EC53005400AA /* JejuTaleVoiceView.swift in Sources */,
 				C4553D602925CFE5005400AA /* JejuTaleView.swift in Sources */,
+				C4553DAE2926552D005400AA /* JejuTTSRegisterView.swift in Sources */,
 				C4A9FF02292571F100BCC8CF /* CustomTabView.swift in Sources */,
 				C4553DA6292622D5005400AA /* LoginManger.swift in Sources */,
 			);
