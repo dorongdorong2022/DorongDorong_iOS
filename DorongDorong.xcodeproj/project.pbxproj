@@ -24,6 +24,7 @@
 		C4553D9B29261835005400AA /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4553D8F29261835005400AA /* Pretendard-Thin.otf */; };
 		C4553D9C29261835005400AA /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4553D9029261835005400AA /* Pretendard-ExtraLight.otf */; };
 		C4553D9D29261835005400AA /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4553D9129261835005400AA /* Pretendard-SemiBold.otf */; };
+		C4553DA429261FEA005400AA /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DA329261FEA005400AA /* APIConstants.swift */; };
 		C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */; };
 		C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED22924B68300BCC8CF /* ContentView.swift */; };
 		C4A9FED52924B68500BCC8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED42924B68500BCC8CF /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		C4553D9029261835005400AA /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		C4553D9129261835005400AA /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		C4553DA029261BCC005400AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4553DA329261FEA005400AA /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		C4A9FECD2924B68300BCC8CF /* DorongDorong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DorongDorong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorongDorongApp.swift; sourceTree = "<group>"; };
 		C4A9FED22924B68300BCC8CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,7 +92,6 @@
 				BA1F362597746544C387918D /* Pods-DorongDorong.debug.xcconfig */,
 				3426AE63B7ADAF35042B6AB0 /* Pods-DorongDorong.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,6 +133,7 @@
 		C4553DA229261CDE005400AA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C4553DA329261FEA005400AA /* APIConstants.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -341,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4553D652925F265005400AA /* VoiceCell.swift in Sources */,
+				C4553DA429261FEA005400AA /* APIConstants.swift in Sources */,
 				C4A9FF062925726B00BCC8CF /* Constants.swift in Sources */,
 				C4A9FF002925611D00BCC8CF /* JejuSoundView.swift in Sources */,
 				C4553D68292601EF005400AA /* RecorderViewModel.swift in Sources */,
@@ -486,7 +489,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortraitUpsideDown;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,7 +521,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortraitUpsideDown;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

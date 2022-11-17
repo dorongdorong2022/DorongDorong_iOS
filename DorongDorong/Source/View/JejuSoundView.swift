@@ -34,7 +34,7 @@ struct JejuSoundView: View {
 
 struct JejuSoundView_Previews: PreviewProvider {
 	static var previews: some View {
-		NavigationStack {
+		NavigationView {
 			ZStack {
 				JejuSoundView(presentSheet: .constant(false))
 			}

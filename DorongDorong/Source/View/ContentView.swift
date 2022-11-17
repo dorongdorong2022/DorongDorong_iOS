@@ -10,17 +10,16 @@ import SwiftUI
 struct ContentView: View {
 	//MARK: Property Wrapper
 	@State private var tabSelection: Tab = .sound
-	@State private var stack = NavigationPath()
 	@State private var presentSheet = false
 
 	var body: some View {
-		NavigationStack(path: $stack) {
+		NavigationView {
 			ZStack {
 				switch tabSelection {
 				case .sound:
 					JejuSoundView(presentSheet: $presentSheet)
 				case .tale:
-					JejuTaleView(stack: $stack, presentSheet: $presentSheet)
+					JejuTaleView(presentSheet: $presentSheet)
 				case .tts:
 					Color.yellow
 				case .coach:
@@ -38,7 +37,6 @@ struct ContentView: View {
 					Text("Detail")
 				}
 				.edgesIgnoringSafeArea(.bottom)
-				.presentationDetents([.height(Screen.maxHeight * 0.83)])
 			}
 		}
 	}

@@ -159,7 +159,7 @@ struct JejuTaleVoiceCellBarView: View {
 
 struct JejuTaleVoiceView_Previews: PreviewProvider {
 	static var previews: some View {
-		NavigationStack {
+		NavigationView {
 			ZStack {
 				JejuTaleVoiceView()
 			}

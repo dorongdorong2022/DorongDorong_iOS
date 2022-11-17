@@ -9,7 +9,6 @@ import SwiftUI
 
 struct JejuTaleView: View {
 	//MARK: Property Wrapper
-	@Binding var stack: NavigationPath	// 이전화면으로
 	@Binding var presentSheet: Bool		// 설화변경 Modal
 	
 	var body: some View {
@@ -38,9 +37,9 @@ struct JejuTaleView: View {
 
 struct JejuTaleView_Previews: PreviewProvider {
 	static var previews: some View {
-		NavigationStack {
+		NavigationView {
 			ZStack {
-				JejuTaleView(stack: .constant(NavigationPath()), presentSheet: .constant(false))
+				JejuTaleView(presentSheet: .constant(false))
 			}
 			.edgesIgnoringSafeArea(.all)
 		}
