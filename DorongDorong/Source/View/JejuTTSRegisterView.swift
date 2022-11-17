@@ -14,15 +14,17 @@ struct JejuTTSRegisterView: View {
     var body: some View {
 		VStack {
 			HStack {
-				Text("보이스 녹음 설명")
+				Text("아래 문장을 읽어주세요")
 					.font(.custom("Pretendard-Bold", size: 20))
 					.bold()
 					.foregroundColor(.white)
 				Spacer()
 			} // HStack
-
+			Spacer()
 		}
+		.padding(24)
 		.navigationBarBackButtonHidden(true)
+		.navigationBarTitleDisplayMode(.inline)
 		.navigationBarItems(leading: Button(action: {
 			presentable.wrappedValue.dismiss()
 		}) {

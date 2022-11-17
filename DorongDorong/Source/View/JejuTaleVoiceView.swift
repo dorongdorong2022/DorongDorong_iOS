@@ -60,6 +60,7 @@ struct JejuTaleVoiceView: View {
 		.padding([.leading, .trailing], 22)
 		.background(.black)
 		.navigationBarBackButtonHidden(true)
+		.navigationBarTitleDisplayMode(.inline)
 		.navigationBarItems(leading: Button(action: {
 			presentable.wrappedValue.dismiss()
 		}) {
