@@ -52,6 +52,7 @@ struct CustomTabView: View {
 				} // ZStack
 				.frame(width: Screen.maxWidth)
 				.background(Color(red: 0, green: 0, blue: 0, opacity: 0.3)) // 반투명
+				.cornerRadius(22)
 			}
 			.edgesIgnoringSafeArea([.bottom])
 		} // VStack
