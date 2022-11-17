@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct JejuTaleView: View {
+	//MARK: Property Wrapper
 	@Binding var stack: NavigationPath
+	@Binding var presentSheet: Bool
 	
 	var body: some View {
 		VStack {
@@ -17,7 +19,7 @@ struct JejuTaleView: View {
 				.scaledToFill()
 		}
 		.navigationBarItems(leading: Button(action: {
-			// Button action
+			presentSheet = true // Button action
 		}) {
 			Text("설화변경")
 				.font(.system(size: 12))
@@ -33,15 +35,14 @@ struct JejuTaleView: View {
 			Image(systemName: "person.wave.2.fill")
 				.foregroundColor(.white)
 		})
-	}
-
+	} // VStack
 }
 
 struct JejuTaleView_Previews: PreviewProvider {
     static var previews: some View {
 		NavigationStack {
 			ZStack {
-				JejuTaleView(stack: .constant(NavigationPath()))
+				JejuTaleView(stack: .constant(NavigationPath()), presentSheet: .constant(false))
 			}
 		}
 		.edgesIgnoringSafeArea(.all)

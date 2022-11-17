@@ -11,15 +11,16 @@ struct ContentView: View {
 	//MARK: Property Wrapper
 	@State private var tabSelection: Tab = .sound
 	@State private var stack = NavigationPath()
+	@State private var presentSheet = false
 
 	var body: some View {
 		NavigationStack(path: $stack) {
 			ZStack {
 				switch tabSelection {
 				case .sound:
-					JejuSoundView(stack: $stack)
+					JejuSoundView(presentSheet: $presentSheet)
 				case .tale:
-					Color.blue
+					JejuTaleView(stack: $stack, presentSheet: $presentSheet)
 				default:
 					Color.red
 				}
@@ -27,6 +28,14 @@ struct ContentView: View {
 				CustomTabView(selection: $tabSelection)
 			} // ZStack
 			.edgesIgnoringSafeArea(.all)
+			.sheet(isPresented: $presentSheet) {
+				ZStack {
+					Color.white
+					Text("Detail")
+				}
+				.edgesIgnoringSafeArea(.bottom)
+				.presentationDetents([.height(Screen.maxHeight * 0.83)])
+			}
 		}
 	}
 }

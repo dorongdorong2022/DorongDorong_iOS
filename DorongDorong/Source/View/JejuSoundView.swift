@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct JejuSoundView: View {
+	//MARK: Property Wrapper
+	@Binding var presentSheet: Bool
+
 	var body: some View {
 		VStack {
 			Image("sample1")
@@ -15,7 +18,7 @@ struct JejuSoundView: View {
 				.scaledToFill()
 		}
 		.navigationBarItems(leading: Button(action: {
-			// Button action
+			presentSheet = true // Button action
 		}) {
 			Text("장소변경")
 				.font(.system(size: 12))
@@ -25,7 +28,7 @@ struct JejuSoundView: View {
 					RoundedRectangle(cornerRadius: 6)
 						.stroke(.white, lineWidth: 1)
 				)
-		})
+		}) // VStack
 	}
 }
 
@@ -33,7 +36,7 @@ struct JejuSoundView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationStack {
 			ZStack {
-				JejuSoundView()
+				JejuSoundView(presentSheet: .constant(false))
 			}
 		}
 		.edgesIgnoringSafeArea(.all)
