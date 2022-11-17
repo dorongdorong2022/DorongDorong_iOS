@@ -18,35 +18,38 @@ struct CustomTabView: View {
 	@Binding var selection: Tab
 	
 	var body: some View {
-		ZStack {
-			HStack(alignment: .center, spacing: 8) {
-				ForEach(0..<3) { index in
-					Spacer().frame(width: Screen.maxWidth * 0.08)
-					
-					Button {
-						switch index {
-						case 0: selection = .sound
-						case 1: selection = .tale
-						case 2: selection = .tts
-						default: selection = .sound
+		VStack {
+			Spacer()
+			ZStack {
+				HStack(alignment: .center, spacing: 8) {
+					ForEach(0..<3) { index in
+						Spacer().frame(width: Screen.maxWidth * 0.08)
+						
+						Button {
+							switch index {
+							case 0: selection = .sound
+							case 1: selection = .tale
+							case 2: selection = .tts
+							default: selection = .sound
+							}
+						} label: {
+							switch index {
+							case 0: TabButton(isSelection: selection == .sound, name: "제주소리", systemName: "leaf.fill", systemNameByNotSelected: "leaf")
+							case 1: TabButton(isSelection: selection == .tale, name: "제주설화", systemName: "book.fill", systemNameByNotSelected: "book")
+							default: TabButton(isSelection: selection == .tts, name: "보이스", systemName: "mic.fill", systemNameByNotSelected: "mic")
+							}
 						}
-					} label: {
-						switch index {
-						case 0: TabButton(isSelection: selection == .sound, name: "제주소리", systemName: "leaf.fill", systemNameByNotSelected: "leaf")
-						case 1: TabButton(isSelection: selection == .tale, name: "제주설화", systemName: "book.fill", systemNameByNotSelected: "book")
-						default: TabButton(isSelection: selection == .tts, name: "보이스", systemName: "mic.fill", systemNameByNotSelected: "mic")
-						}
-					}
-					
-					Spacer().frame(width: Screen.maxWidth * 0.08)
-				} // HStack
-				.frame(height: Screen.maxHeight * 0.11 - 5)
-				.edgesIgnoringSafeArea(.all)
-			} // ZStack
-			.frame(width: Screen.maxWidth)
-			.background(Color(red: 0, green: 0, blue: 0, opacity: 0.3)) // 반투명
-		}
-		.edgesIgnoringSafeArea([.bottom])
+						
+						Spacer().frame(width: Screen.maxWidth * 0.08)
+					} // HStack
+					.frame(height: Screen.maxHeight * 0.11 - 5)
+					.edgesIgnoringSafeArea(.all)
+				} // ZStack
+				.frame(width: Screen.maxWidth)
+				.background(Color(red: 0, green: 0, blue: 0, opacity: 0.3)) // 반투명
+			}
+			.edgesIgnoringSafeArea([.bottom])
+		} // VStack
 	}
 }
 

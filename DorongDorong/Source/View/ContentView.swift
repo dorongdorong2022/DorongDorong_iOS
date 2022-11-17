@@ -12,7 +12,7 @@ struct ContentView: View {
 	@State private var tabSelection: Tab = .sound
 	
 	var body: some View {
-		ZStack(alignment: .bottom) {
+		ZStack {
 			switch tabSelection {
 			case .sound:
 				JejuSoundView()
