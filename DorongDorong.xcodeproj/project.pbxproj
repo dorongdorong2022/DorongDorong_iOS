@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51E40F991931F05191814F90 /* Pods_DorongDorong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC149C90798C1B2781E539BF /* Pods_DorongDorong.framework */; };
 		C4553D602925CFE5005400AA /* JejuTaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D5F2925CFE5005400AA /* JejuTaleView.swift */; };
 		C4553D622925EC53005400AA /* JejuTaleVoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D612925EC53005400AA /* JejuTaleVoiceView.swift */; };
 		C4553D652925F265005400AA /* VoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D642925F265005400AA /* VoiceCell.swift */; };
@@ -33,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3426AE63B7ADAF35042B6AB0 /* Pods-DorongDorong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DorongDorong.release.xcconfig"; path = "Target Support Files/Pods-DorongDorong/Pods-DorongDorong.release.xcconfig"; sourceTree = "<group>"; };
+		BA1F362597746544C387918D /* Pods-DorongDorong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DorongDorong.debug.xcconfig"; path = "Target Support Files/Pods-DorongDorong/Pods-DorongDorong.debug.xcconfig"; sourceTree = "<group>"; };
+		BC149C90798C1B2781E539BF /* Pods_DorongDorong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DorongDorong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4553D5F2925CFE5005400AA /* JejuTaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTaleView.swift; sourceTree = "<group>"; };
 		C4553D612925EC53005400AA /* JejuTaleVoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTaleVoiceView.swift; sourceTree = "<group>"; };
 		C4553D642925F265005400AA /* VoiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCell.swift; sourceTree = "<group>"; };
@@ -65,12 +69,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E40F991931F05191814F90 /* Pods_DorongDorong.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18D69A25DDF877DD61540F7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC149C90798C1B2781E539BF /* Pods_DorongDorong.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D452887CE3C2655D5845525 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA1F362597746544C387918D /* Pods-DorongDorong.debug.xcconfig */,
+				3426AE63B7ADAF35042B6AB0 /* Pods-DorongDorong.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C4553D632925F258005400AA /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,11 +129,20 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		C4553DA229261CDE005400AA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		C4A9FEC42924B68300BCC8CF = {
 			isa = PBXGroup;
 			children = (
 				C4A9FECF2924B68300BCC8CF /* DorongDorong */,
 				C4A9FECE2924B68300BCC8CF /* Products */,
+				4D452887CE3C2655D5845525 /* Pods */,
+				18D69A25DDF877DD61540F7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +178,7 @@
 		C4A9FEFD292560C700BCC8CF /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C4553DA229261CDE005400AA /* Network */,
 				C4553D632925F258005400AA /* Models */,
 				C4553D66292601CC005400AA /* ViewModel */,
 				C4A9FEFE292560DB00BCC8CF /* View */,
@@ -189,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4A9FEDB2924B68500BCC8CF /* Build configuration list for PBXNativeTarget "DorongDorong" */;
 			buildPhases = (
+				22C7A1F40C1ADA90E18150BF /* [CP] Check Pods Manifest.lock */,
 				C4A9FEC92924B68300BCC8CF /* Sources */,
 				C4A9FECA2924B68300BCC8CF /* Frameworks */,
 				C4A9FECB2924B68300BCC8CF /* Resources */,
+				75994B1430E4A6A27C73E6BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,7 +253,7 @@
 				};
 			};
 			buildConfigurationList = C4A9FEC82924B68300BCC8CF /* Build configuration list for PBXProject "DorongDorong" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -257,6 +292,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22C7A1F40C1ADA90E18150BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DorongDorong-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75994B1430E4A6A27C73E6BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DorongDorong/Pods-DorongDorong-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DorongDorong/Pods-DorongDorong-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DorongDorong/Pods-DorongDorong-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4A9FEC92924B68300BCC8CF /* Sources */ = {
@@ -395,6 +472,7 @@
 		};
 		C4A9FEDC2924B68500BCC8CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA1F362597746544C387918D /* Pods-DorongDorong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -424,6 +502,7 @@
 		};
 		C4A9FEDD2924B68500BCC8CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3426AE63B7ADAF35042B6AB0 /* Pods-DorongDorong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

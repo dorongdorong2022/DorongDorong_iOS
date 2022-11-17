@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (5.6.2)
+  - Introspect (0.1.4)
+  - lottie-ios (3.4.1)
+  - SwiftKeychainWrapper (4.0.1)
+  - URLImage (2.2.5):
+    - URLImage/Common (= 2.2.5)
+    - URLImage/DownloadManager (= 2.2.5)
+    - URLImage/FileIndex (= 2.2.5)
+    - URLImage/ImageDecoder (= 2.2.5)
+    - URLImage/Log (= 2.2.5)
+    - URLImage/PlainDatabase (= 2.2.5)
+    - URLImage/RemoteContentView (= 2.2.5)
+  - URLImage/Common (2.2.5)
+  - URLImage/DownloadManager (2.2.5):
+    - URLImage/Log
+  - URLImage/FileIndex (2.2.5):
+    - URLImage/Common
+    - URLImage/Log
+    - URLImage/PlainDatabase
+  - URLImage/ImageDecoder (2.2.5)
+  - URLImage/Log (2.2.5)
+  - URLImage/PlainDatabase (2.2.5)
+  - URLImage/RemoteContentView (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - Introspect
+  - lottie-ios
+  - SwiftKeychainWrapper
+  - URLImage
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Introspect
+    - lottie-ios
+    - SwiftKeychainWrapper
+    - URLImage
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  Introspect: b62c4dd2063072327c21d618ef2bedc3c87bc366
+  lottie-ios: 016449b5d8be0c3dcbcfa0a9988469999cd04c5d
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
+  URLImage: 36a66c03ba2a9ccbbf06bc83431f2cef171008e8
+
+PODFILE CHECKSUM: 0f6ccaeca86085b034394c464ebd7a56e6b90d7c
+
+COCOAPODS: 1.11.3
