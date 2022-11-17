@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct JejuTTSRegisterView: View {
+struct JejuTTSExplainView: View {
 	//MARK: Property
 	let widthPadding = 24.0
 	let explanation = [
@@ -72,7 +72,7 @@ struct JejuTTSRegisterView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
 			ZStack {
-				JejuTTSRegisterView()
+				JejuTTSExplainView()
 			}
 			.ignoresSafeArea(.all)
 		}
