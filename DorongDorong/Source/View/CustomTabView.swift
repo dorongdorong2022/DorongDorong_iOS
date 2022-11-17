@@ -11,6 +11,8 @@ enum Tab {
 	case sound
 	case tale
 	case tts
+	case coach
+	case challenge
 }
 
 struct CustomTabView: View {
@@ -22,25 +24,28 @@ struct CustomTabView: View {
 			Spacer()
 			ZStack {
 				HStack(alignment: .center, spacing: 8) {
-					ForEach(0..<3) { index in
-						Spacer().frame(width: Screen.maxWidth * 0.08)
+					ForEach(0..<5) { index in
+						Spacer().frame(width: Screen.maxWidth * 0.02)
 						
 						Button {
 							switch index {
 							case 0: selection = .sound
 							case 1: selection = .tale
 							case 2: selection = .tts
-							default: selection = .sound
+							case 3: selection = .coach
+							default: selection = .challenge
 							}
 						} label: {
 							switch index {
 							case 0: TabButton(isSelection: selection == .sound, name: "제주소리", systemName: "leaf.fill", systemNameByNotSelected: "leaf")
 							case 1: TabButton(isSelection: selection == .tale, name: "제주설화", systemName: "book.fill", systemNameByNotSelected: "book")
-							default: TabButton(isSelection: selection == .tts, name: "보이스", systemName: "mic.fill", systemNameByNotSelected: "mic")
+							case 2: TabButton(isSelection: selection == .tts, name: "보이스", systemName: "mic.fill", systemNameByNotSelected: "mic")
+							case 3: TabButton(isSelection: selection == .coach, name: "태교코칭", systemName: "checkmark.rectangle.portrait.fill", systemNameByNotSelected: "checkmark.rectangle.portrait")
+							default: TabButton(isSelection: selection == .challenge, name: "챌린지", systemName: "flag.fill", systemNameByNotSelected: "flag")
 							}
 						}
 						
-						Spacer().frame(width: Screen.maxWidth * 0.08)
+						Spacer().frame(width: Screen.maxWidth * 0.02)
 					} // HStack
 					.frame(height: Screen.maxHeight * 0.11 - 5)
 					.edgesIgnoringSafeArea(.all)

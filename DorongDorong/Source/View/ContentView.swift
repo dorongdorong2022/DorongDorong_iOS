@@ -21,6 +21,10 @@ struct ContentView: View {
 					JejuSoundView(presentSheet: $presentSheet)
 				case .tale:
 					JejuTaleView(stack: $stack, presentSheet: $presentSheet)
+				case .tts:
+					Color.yellow
+				case .coach:
+					Color.black
 				default:
 					Color.red
 				}
