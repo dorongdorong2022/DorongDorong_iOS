@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C4553D602925CFE5005400AA /* JejuTaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D5F2925CFE5005400AA /* JejuTaleView.swift */; };
 		C4553D622925EC53005400AA /* JejuTaleVoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D612925EC53005400AA /* JejuTaleVoiceView.swift */; };
+		C4553D652925F265005400AA /* VoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D642925F265005400AA /* VoiceCell.swift */; };
 		C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */; };
 		C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED22924B68300BCC8CF /* ContentView.swift */; };
 		C4A9FED52924B68500BCC8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED42924B68500BCC8CF /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		C4553D5F2925CFE5005400AA /* JejuTaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTaleView.swift; sourceTree = "<group>"; };
 		C4553D612925EC53005400AA /* JejuTaleVoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTaleVoiceView.swift; sourceTree = "<group>"; };
+		C4553D642925F265005400AA /* VoiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCell.swift; sourceTree = "<group>"; };
 		C4A9FECD2924B68300BCC8CF /* DorongDorong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DorongDorong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorongDorongApp.swift; sourceTree = "<group>"; };
 		C4A9FED22924B68300BCC8CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4553D632925F258005400AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4553D642925F265005400AA /* VoiceCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C4A9FEC42924B68300BCC8CF = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 		C4A9FEFD292560C700BCC8CF /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C4553D632925F258005400AA /* Models */,
 				C4A9FEFE292560DB00BCC8CF /* View */,
 			);
 			path = Source;
@@ -184,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4553D652925F265005400AA /* VoiceCell.swift in Sources */,
 				C4A9FF062925726B00BCC8CF /* Constants.swift in Sources */,
 				C4A9FF002925611D00BCC8CF /* JejuSoundView.swift in Sources */,
 				C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */,
