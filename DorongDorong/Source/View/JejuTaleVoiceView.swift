@@ -18,7 +18,7 @@ struct JejuTaleVoiceView: View {
 	let widthPadding = 24.0
 	
 	var body: some View {
-		VStack(spacing: 20) {
+		VStack(spacing: 38) {
 			HStack {
 				Text("목소리를 선택해주세요")
 					.font(.custom("Pretendard-Bold", size: 20))
@@ -27,30 +27,37 @@ struct JejuTaleVoiceView: View {
 				Spacer()
 			} // HStack
 			
-			List {
-				ForEach(0..<voiceViewModel.voiceList.count, id: \.self) { index in
-					JejuTaleVoiceCellView(voiceViewModel: voiceViewModel, isPlay: $isPlay, info: voiceViewModel.voiceList[index], index: index)
-				}
-				
-				// Last Element
-				Button {
-					
-				} label: {
-					VStack(spacing: 8) {
-						Text("음성 추가하기")
-							.font(.custom("Pretendard-Regular", size: 12))
-
-						Image(systemName: "plus")
-							.resizable()
-							.scaledToFit()
-							.frame(width: 22)
+			ScrollView {
+				LazyVStack(spacing: 21) {
+					ForEach(0..<voiceViewModel.voiceList.count, id: \.self) { index in
+						JejuTaleVoiceCellView(voiceViewModel: voiceViewModel, isPlay: $isPlay, info: voiceViewModel.voiceList[index], index: index)
 					}
-				}
-				.foregroundColor(Color(uiColor: .lightGray))
-				.frame(width: screen.maxWidth-(widthPadding*2), height: screen.maxHeight*0.15)
-			}
+					
+					// Last Element
+					Button {
+						
+					} label: {
+						VStack(spacing: 8) {
+							Text("음성 추가하기")
+								.font(.custom("Pretendard-Regular", size: 12))
+
+							Image(systemName: "plus")
+								.resizable()
+								.scaledToFit()
+								.frame(width: 22)
+						}
+					}
+					.foregroundColor(Color(uiColor: .darkGray))
+					.frame(width: screen.maxWidth-(widthPadding*2), height: screen.maxHeight*0.15)
+					.background(Color(uiColor: .clear))
+					.overlay(
+						RoundedRectangle(cornerRadius: 10)
+							.stroke(Color(uiColor: .darkGray), lineWidth: 2)
+					)
+				} // List
+			} // ScrollView
 		} // VStack
-		.padding()
+		.padding([.leading, .trailing], 22)
 		.background(.black)
 		.navigationBarBackButtonHidden(true)
 		.navigationBarItems(leading: Button(action: {
@@ -128,7 +135,7 @@ struct JejuTaleVoiceCellView: View {
 				} // VStack
 			} // Button
 			.frame(width: screen.maxWidth-(widthPadding*2), height: screen.maxHeight*0.15)
-			.background(Color(uiColor: .darkGray))
+			.background(Color("darkGray"))
 			.cornerRadius(10)
 			
 			Button {
@@ -153,7 +160,7 @@ struct JejuTaleVoiceCellBarView: View {
 	var body: some View {
 		Rectangle()
 			.frame(width: 2, height: 32)
-			.foregroundColor(isStep ? Color("violet") : Color(uiColor: .lightGray))
+			.foregroundColor(isStep ? Color("violet") : Color(uiColor: .darkGray))
 	}
 }
 
