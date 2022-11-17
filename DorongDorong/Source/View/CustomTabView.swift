@@ -47,7 +47,7 @@ struct CustomTabView: View {
 						
 						Spacer().frame(width: Screen.maxWidth * 0.02)
 					} // HStack
-					.frame(height: Screen.maxHeight * 0.11 - 5)
+					.frame(height: Screen.maxHeight * 0.12)
 					.edgesIgnoringSafeArea(.all)
 				} // ZStack
 				.frame(width: Screen.maxWidth)

@@ -21,7 +21,7 @@ struct ContentView: View {
 				case .tale:
 					JejuTaleView(presentSheet: $presentSheet)
 				case .tts:
-					Color.yellow
+					JejuTTSRegisterView()
 				case .coach:
 					Color.black
 				default:
