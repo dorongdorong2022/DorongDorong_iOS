@@ -10,21 +10,24 @@ import SwiftUI
 struct ContentView: View {
 	//MARK: Property Wrapper
 	@State private var tabSelection: Tab = .sound
-	
+	@State private var stack = NavigationPath()
+
 	var body: some View {
-		ZStack {
-			switch tabSelection {
-			case .sound:
-				JejuSoundView()
-			case .tale:
-				Color.blue
-			default:
-				Color.red
-			}
-			
-			CustomTabView(selection: $tabSelection)
-		} // ZStack
-		.edgesIgnoringSafeArea(.all)
+		NavigationStack(path: $stack) {
+			ZStack {
+				switch tabSelection {
+				case .sound:
+					JejuSoundView(stack: $stack)
+				case .tale:
+					Color.blue
+				default:
+					Color.red
+				}
+				
+				CustomTabView(selection: $tabSelection)
+			} // ZStack
+			.edgesIgnoringSafeArea(.all)
+		}
 	}
 }
 
