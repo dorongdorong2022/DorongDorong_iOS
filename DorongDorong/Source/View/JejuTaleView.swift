@@ -22,7 +22,7 @@ struct JejuTaleView: View {
 			presentSheet = true // Button action
 		}) {
 			Text("설화변경")
-				.font(.system(size: 12))
+				.font(.custom("Pretendard-Medium", size: 12))
 				.foregroundColor(.white)
 				.padding(5)
 				.overlay(

@@ -72,7 +72,7 @@ struct TabButton: View {
 			Image(systemName: isSelection ? systemName : systemNameByNotSelected)
 				.font(.system(size: 24))
 			Text(name)
-				.font(.system(size: 11))
+				.font(.custom("Pretendard-Medium", size: 11))
 			Spacer()
 		}
 		.padding(.vertical, 17)

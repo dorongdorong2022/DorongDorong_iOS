@@ -21,7 +21,7 @@ struct JejuTaleVoiceView: View {
 		VStack(spacing: 20) {
 			HStack {
 				Text("목소리를 선택해주세요")
-					.font(.system(size: 20))
+					.font(.custom("Pretendard-Bold", size: 20))
 					.bold()
 					.foregroundColor(.white)
 				Spacer()
@@ -38,7 +38,8 @@ struct JejuTaleVoiceView: View {
 				} label: {
 					VStack(spacing: 8) {
 						Text("음성 추가하기")
-						
+							.font(.custom("Pretendard-Regular", size: 12))
+
 						Image(systemName: "plus")
 							.resizable()
 							.scaledToFit()
@@ -82,7 +83,7 @@ struct JejuTaleVoiceCellView: View {
 				VStack {
 					HStack {
 						Text(info.name)
-							.font(.system(size: 14, weight: .semibold))
+							.font(.custom("Pretendard-SemiBold", size: 14))
 						Spacer()
 						if info.isSelected {
 							Circle()
