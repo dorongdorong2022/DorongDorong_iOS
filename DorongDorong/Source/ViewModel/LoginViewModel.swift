@@ -8,17 +8,12 @@
 import Foundation
 import Alamofire
 import Combine
+import SwiftKeychainWrapper
 
 class LoginViewModel: ObservableObject {
 	private var subscription = Set<AnyCancellable>()    // disposeBag
 
 	func getToken() {
-		print(LoginManger.postLogin.headers)
-		print(LoginManger.postLogin.baseURL)
-		print(LoginManger.postLogin.method)
-		print(LoginManger.postLogin.parameters)
-		print(LoginManger.postLogin.urlRequest)
-		
 		AF.request(LoginManger.postLogin)
 			.publishDecodable(type: LoginResponse.self)
 			.value()
@@ -38,6 +33,8 @@ class LoginViewModel: ObservableObject {
 				},
 				receiveValue: { receivedValue in
 					print("받은 값 : \(receivedValue)")
+					Constant.accessToken = receivedValue.accessToken
+					KeychainWrapper.standard.set(receivedValue.accessToken, forKey: "accessToken")
 				}
 			)
 			.store(in: &subscription)  // disposed(by: disposeBag)
