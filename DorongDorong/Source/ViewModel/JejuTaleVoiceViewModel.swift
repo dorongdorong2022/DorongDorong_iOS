@@ -5,4 +5,10 @@
 //  Created by geonhyeong on 2022/11/17.
 //
 
-import Foundation
+import SwiftUI
+import Combine
+
+class JejuTaleVoiceViewModel: ObservableObject {
+	@Published var voiceList: [VoiceCell] = []
+	@Published var isActive: [Bool] = []
+}
