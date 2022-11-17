@@ -8,23 +8,48 @@
 import SwiftUI
 
 struct JejuTaleVoiceView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+	//MARK: Property Wrapper
+	@ObservedObject var voiceViewModel = JejuTaleVoiceViewModel()
+	@State private var isPlay: Bool = false
+	
+	var body: some View {
+		VStack(spacing: 20) {
+			HStack {
+				Text("목소리를 선택해주세요")
+					.font(.system(size: 20))
+					.bold()
+					.foregroundColor(.white)
+				Spacer()
+			} // HStack
+			
+			List {
+				ForEach(0..<voiceViewModel.voiceList.count, id: \.self) { index in
+					JejuTaleVoiceCellView(voiceViewModel: voiceViewModel, isPlay: $isPlay, info: voiceViewModel.voiceList[index], index: index)
+				}
+			}
+		} // VStack
+		.padding()
+		.background(.black)
+	}
+}
+
 //MARK: - JejuTaleVoice CellView
 struct JejuTaleVoiceCellView: View {
 	//MARK: Property Wrapper
+	@ObservedObject private var audioRecorder = RecorderViewModel(numberOfSamples: 35)
+	@ObservedObject var voiceViewModel: JejuTaleVoiceViewModel
 	@Binding var isPlay: Bool
 	
 	//MARK: Property
 	let screen = Screen.self
-	let widthPadding = 10.0
+	let widthPadding = 24.0
 	var info: VoiceCell
+	var index: Int
 	
 	var body: some View {
 		ZStack {
 			Button(action: {
-				
+				voiceViewModel.isActive[index].toggle()
 			}) {
 				VStack {
 					HStack {
@@ -50,9 +75,9 @@ struct JejuTaleVoiceCellView: View {
 						}
 					} // HStack
 					.foregroundColor(.white)
-					.padding()
+					.padding([.leading, .top, .trailing], 22)
 					
-					HStack {
+					HStack(spacing: 22) {
 						Button {
 						} label: {
 							Image(systemName: isPlay ? "play.circle.fill" : "play.circle")
@@ -63,10 +88,14 @@ struct JejuTaleVoiceCellView: View {
 								.frame(width: 44)
 								.hidden()
 						}
-						Spacer()
+						
+						HStack(alignment: .center, spacing: 4) {
+							ForEach(self.audioRecorder.soundSamples, id: \.self) { step in
+								JejuTaleVoiceCellBarView(isStep: step)
+							}
+						} // HStack
 					}
-					.padding([.bottom, .trailing], 22)
-					.padding(.leading, 15)
+					.padding([.leading, .bottom, .trailing], 22)
 				} // VStack
 			} // Button
 			.frame(width: screen.maxWidth-(widthPadding*2), height: screen.maxHeight*0.15)
@@ -83,7 +112,7 @@ struct JejuTaleVoiceCellView: View {
 					.foregroundStyle(isPlay ? .white : Color("violet"), Color("violet"))
 					.frame(width: 44)
 			}
-			.offset(x: -140, y: 20)
+			.offset(x: -120, y: 15)
 		} // ZStack
 	}
 }
@@ -93,23 +122,18 @@ struct JejuTaleVoiceCellBarView: View {
 	var isStep: Bool // 색상을 변경할지 결졍
 	
 	var body: some View {
-	  Rectangle()
-		.frame(width: 2, height: 32)
-		.foregroundColor(isStep ? Color("violet") : Color(uiColor: .lightGray))
+		Rectangle()
+			.frame(width: 2, height: 32)
+			.foregroundColor(isStep ? Color("violet") : Color(uiColor: .lightGray))
 	}
 }
 
 struct JejuTaleVoiceView_Previews: PreviewProvider {
 	static var previews: some View {
-		//		NavigationStack {
-		//			ZStack {
-		//				JejuTaleVoiceView()
-		//			}
-		//			.edgesIgnoringSafeArea(.all)
-		//		}
-		
-		JejuTaleVoiceCellView(isPlay: .constant(true), info: VoiceCell(id: "1", name: "엄마", fileLink: "dasd", isSelected: true))
-
-//		JejuTaleVoiceCellBarView(isStep: true)
+		NavigationStack {
+			ZStack {
+				JejuTaleVoiceView()
+			}
+		}
 	}
 }

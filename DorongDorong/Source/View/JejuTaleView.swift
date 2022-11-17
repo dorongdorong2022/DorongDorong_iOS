@@ -29,7 +29,7 @@ struct JejuTaleView: View {
 					RoundedRectangle(cornerRadius: 6)
 						.stroke(.white, lineWidth: 1)
 				)
-		}, trailing: NavigationLink(destination: EmptyView()) {
+		}, trailing: NavigationLink(destination: JejuTaleVoiceView()) {
 			Image(systemName: "person.wave.2.fill")
 				.foregroundColor(.white)
 		}.navigationBarBackButtonHidden(true)) // NavigationLink
