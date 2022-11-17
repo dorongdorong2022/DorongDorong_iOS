@@ -36,6 +36,8 @@
 		C4553DC5292670C8005400AA /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DC4292670C8005400AA /* AuthorizationViewModel.swift */; };
 		C4553DC729267110005400AA /* RecordAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DC629267110005400AA /* RecordAuthorization.swift */; };
 		C4553DCA292688AA005400AA /* ModalBackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DC9292688AA005400AA /* ModalBackGround.swift */; };
+		C4553DCC29268C0A005400AA /* Ex+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DCB29268C0A005400AA /* Ex+Alert.swift */; };
+		C4553DCE29269DAF005400AA /* LodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DCD29269DAF005400AA /* LodingView.swift */; };
 		C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */; };
 		C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED22924B68300BCC8CF /* ContentView.swift */; };
 		C4A9FED52924B68500BCC8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED42924B68500BCC8CF /* Assets.xcassets */; };
@@ -78,6 +80,8 @@
 		C4553DC4292670C8005400AA /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
 		C4553DC629267110005400AA /* RecordAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAuthorization.swift; sourceTree = "<group>"; };
 		C4553DC9292688AA005400AA /* ModalBackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalBackGround.swift; sourceTree = "<group>"; };
+		C4553DCB29268C0A005400AA /* Ex+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Alert.swift"; sourceTree = "<group>"; };
+		C4553DCD29269DAF005400AA /* LodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingView.swift; sourceTree = "<group>"; };
 		C4A9FECD2924B68300BCC8CF /* DorongDorong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DorongDorong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorongDorongApp.swift; sourceTree = "<group>"; };
 		C4A9FED22924B68300BCC8CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				C4553DB129265D03005400AA /* Ex+Color.swift */,
+				C4553DCB29268C0A005400AA /* Ex+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				C4553DC629267110005400AA /* RecordAuthorization.swift */,
+				C4553DCD29269DAF005400AA /* LodingView.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 			files = (
 				C4553DB429265D4F005400AA /* PlaySongs.swift in Sources */,
 				C4553D652925F265005400AA /* VoiceCell.swift in Sources */,
+				C4553DCC29268C0A005400AA /* Ex+Alert.swift in Sources */,
 				C4553DA429261FEA005400AA /* APIConstants.swift in Sources */,
 				C4A9FF062925726B00BCC8CF /* Constants.swift in Sources */,
 				C4A9FF002925611D00BCC8CF /* JejuSoundView.swift in Sources */,
@@ -409,6 +416,7 @@
 				C4553D622925EC53005400AA /* JejuTaleVoiceView.swift in Sources */,
 				C4553D602925CFE5005400AA /* JejuTaleView.swift in Sources */,
 				C4553DB629265D6D005400AA /* Song.swift in Sources */,
+				C4553DCE29269DAF005400AA /* LodingView.swift in Sources */,
 				C4553DAE2926552D005400AA /* JejuTTSRegisterView.swift in Sources */,
 				C4553DB229265D03005400AA /* Ex+Color.swift in Sources */,
 				C4A9FF02292571F100BCC8CF /* CustomTabView.swift in Sources */,

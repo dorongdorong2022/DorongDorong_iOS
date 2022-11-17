@@ -51,7 +51,7 @@ struct CustomTabView: View {
 					.edgesIgnoringSafeArea(.all)
 				} // ZStack
 				.frame(width: Screen.maxWidth)
-				.background(Color(red: 0, green: 0, blue: 0, opacity: 0.3)) // 반투명
+				.background(Color(red: 0, green: 0, blue: 0, opacity: 0.5)) // 반투명
 				.cornerRadius(22)
 			}
 			.edgesIgnoringSafeArea([.bottom])
