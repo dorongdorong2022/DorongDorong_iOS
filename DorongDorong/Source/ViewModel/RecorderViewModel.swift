@@ -85,9 +85,11 @@ class RecorderViewModel: NSObject, ObservableObject {
 		isRecording = false
 		timer.invalidate()
 		audioRecorder.stop()
-		self.startInit(audio: self.url!)
 		self.currentStepbar = 0
 		self.soundSamples = [Bool](repeating: false, count: numberOfStepbar)
+		guard let url = self.url else { return }
+		
+		self.startInit(audio: url)
 	}
 	
 	// 소리를 수치로 바꿔주는 함수

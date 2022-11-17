@@ -30,6 +30,11 @@
 		C4553DAA292629FF005400AA /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DA9292629FF005400AA /* Response.swift */; };
 		C4553DAC29264A72005400AA /* JejuTTSExplainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DAB29264A72005400AA /* JejuTTSExplainView.swift */; };
 		C4553DAE2926552D005400AA /* JejuTTSRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DAD2926552D005400AA /* JejuTTSRegisterView.swift */; };
+		C4553DB229265D03005400AA /* Ex+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DB129265D03005400AA /* Ex+Color.swift */; };
+		C4553DB429265D4F005400AA /* PlaySongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DB329265D4F005400AA /* PlaySongs.swift */; };
+		C4553DB629265D6D005400AA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DB529265D6D005400AA /* Song.swift */; };
+		C4553DC5292670C8005400AA /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DC4292670C8005400AA /* AuthorizationViewModel.swift */; };
+		C4553DC729267110005400AA /* RecordAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DC629267110005400AA /* RecordAuthorization.swift */; };
 		C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */; };
 		C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED22924B68300BCC8CF /* ContentView.swift */; };
 		C4A9FED52924B68500BCC8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED42924B68500BCC8CF /* Assets.xcassets */; };
@@ -66,6 +71,11 @@
 		C4553DA9292629FF005400AA /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C4553DAB29264A72005400AA /* JejuTTSExplainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTTSExplainView.swift; sourceTree = "<group>"; };
 		C4553DAD2926552D005400AA /* JejuTTSRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTTSRegisterView.swift; sourceTree = "<group>"; };
+		C4553DB129265D03005400AA /* Ex+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Color.swift"; sourceTree = "<group>"; };
+		C4553DB329265D4F005400AA /* PlaySongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySongs.swift; sourceTree = "<group>"; };
+		C4553DB529265D6D005400AA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		C4553DC4292670C8005400AA /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
+		C4553DC629267110005400AA /* RecordAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAuthorization.swift; sourceTree = "<group>"; };
 		C4A9FECD2924B68300BCC8CF /* DorongDorong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DorongDorong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorongDorongApp.swift; sourceTree = "<group>"; };
 		C4A9FED22924B68300BCC8CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +120,7 @@
 			children = (
 				C4553D642925F265005400AA /* VoiceCell.swift */,
 				C4553DA9292629FF005400AA /* Response.swift */,
+				C4553DB529265D6D005400AA /* Song.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,9 +128,11 @@
 		C4553D66292601CC005400AA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C4553DC4292670C8005400AA /* AuthorizationViewModel.swift */,
 				C4553DA7292628F6005400AA /* LoginViewModel.swift */,
 				C4553D69292607D0005400AA /* JejuTaleVoiceViewModel.swift */,
 				C4553D67292601EF005400AA /* RecorderViewModel.swift */,
+				C4553DB329265D4F005400AA /* PlaySongs.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -149,6 +162,22 @@
 				C4553DA5292622D5005400AA /* LoginManger.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C4553DB029265CF5005400AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C4553DB129265D03005400AA /* Ex+Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C4553DC829267117005400AA /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				C4553DC629267110005400AA /* RecordAuthorization.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 		C4A9FEC42924B68300BCC8CF = {
@@ -204,6 +233,7 @@
 		C4A9FEFE292560DB00BCC8CF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4553DC829267117005400AA /* Authorization */,
 				C4A9FED22924B68300BCC8CF /* ContentView.swift */,
 				C4A9FF01292571F100BCC8CF /* CustomTabView.swift */,
 				C4A9FEFF2925611D00BCC8CF /* JejuSoundView.swift */,
@@ -218,6 +248,7 @@
 		C4A9FF032925724100BCC8CF /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				C4553DB029265CF5005400AA /* Extensions */,
 				C4553D8529261835005400AA /* Fonts */,
 				C4A9FF042925724F00BCC8CF /* Constants */,
 			);
@@ -357,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4553DB429265D4F005400AA /* PlaySongs.swift in Sources */,
 				C4553D652925F265005400AA /* VoiceCell.swift in Sources */,
 				C4553DA429261FEA005400AA /* APIConstants.swift in Sources */,
 				C4A9FF062925726B00BCC8CF /* Constants.swift in Sources */,
@@ -366,11 +398,15 @@
 				C4553DAA292629FF005400AA /* Response.swift in Sources */,
 				C4553D6A292607D0005400AA /* JejuTaleVoiceViewModel.swift in Sources */,
 				C4553DAC29264A72005400AA /* JejuTTSExplainView.swift in Sources */,
+				C4553DC5292670C8005400AA /* AuthorizationViewModel.swift in Sources */,
 				C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */,
+				C4553DC729267110005400AA /* RecordAuthorization.swift in Sources */,
 				C4553DA8292628F6005400AA /* LoginViewModel.swift in Sources */,
 				C4553D622925EC53005400AA /* JejuTaleVoiceView.swift in Sources */,
 				C4553D602925CFE5005400AA /* JejuTaleView.swift in Sources */,
+				C4553DB629265D6D005400AA /* Song.swift in Sources */,
 				C4553DAE2926552D005400AA /* JejuTTSRegisterView.swift in Sources */,
+				C4553DB229265D03005400AA /* Ex+Color.swift in Sources */,
 				C4A9FF02292571F100BCC8CF /* CustomTabView.swift in Sources */,
 				C4553DA6292622D5005400AA /* LoginManger.swift in Sources */,
 			);
@@ -506,6 +542,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DorongDorong/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "앱에서 음성 녹음을 위해 마이크를 사용합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -537,6 +574,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DorongDorong/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "앱에서 음성 녹음을 위해 마이크를 사용합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
