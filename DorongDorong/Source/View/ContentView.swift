@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 	//MARK: Property Wrapper
+	@ObservedObject var login: LoginViewModel = LoginViewModel()
 	@State private var tabSelection: Tab = .sound
 	@State private var presentSheet = false
 
@@ -38,6 +39,9 @@ struct ContentView: View {
 				}
 				.edgesIgnoringSafeArea(.bottom)
 			}
+		}
+		.onAppear {
+			login.getToken()
 		}
 	}
 }

@@ -25,6 +25,9 @@
 		C4553D9C29261835005400AA /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4553D9029261835005400AA /* Pretendard-ExtraLight.otf */; };
 		C4553D9D29261835005400AA /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4553D9129261835005400AA /* Pretendard-SemiBold.otf */; };
 		C4553DA429261FEA005400AA /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DA329261FEA005400AA /* APIConstants.swift */; };
+		C4553DA6292622D5005400AA /* LoginManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DA5292622D5005400AA /* LoginManger.swift */; };
+		C4553DA8292628F6005400AA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DA7292628F6005400AA /* LoginViewModel.swift */; };
+		C4553DAA292629FF005400AA /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DA9292629FF005400AA /* Response.swift */; };
 		C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */; };
 		C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED22924B68300BCC8CF /* ContentView.swift */; };
 		C4A9FED52924B68500BCC8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED42924B68500BCC8CF /* Assets.xcassets */; };
@@ -56,6 +59,9 @@
 		C4553D9129261835005400AA /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		C4553DA029261BCC005400AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4553DA329261FEA005400AA /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		C4553DA5292622D5005400AA /* LoginManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManger.swift; sourceTree = "<group>"; };
+		C4553DA7292628F6005400AA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C4553DA9292629FF005400AA /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C4A9FECD2924B68300BCC8CF /* DorongDorong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DorongDorong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorongDorongApp.swift; sourceTree = "<group>"; };
 		C4A9FED22924B68300BCC8CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				C4553D642925F265005400AA /* VoiceCell.swift */,
+				C4553DA9292629FF005400AA /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,6 +113,7 @@
 		C4553D66292601CC005400AA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C4553DA7292628F6005400AA /* LoginViewModel.swift */,
 				C4553D69292607D0005400AA /* JejuTaleVoiceViewModel.swift */,
 				C4553D67292601EF005400AA /* RecorderViewModel.swift */,
 			);
@@ -134,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				C4553DA329261FEA005400AA /* APIConstants.swift */,
+				C4553DA5292622D5005400AA /* LoginManger.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -348,11 +357,14 @@
 				C4A9FF002925611D00BCC8CF /* JejuSoundView.swift in Sources */,
 				C4553D68292601EF005400AA /* RecorderViewModel.swift in Sources */,
 				C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */,
+				C4553DAA292629FF005400AA /* Response.swift in Sources */,
 				C4553D6A292607D0005400AA /* JejuTaleVoiceViewModel.swift in Sources */,
 				C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */,
+				C4553DA8292628F6005400AA /* LoginViewModel.swift in Sources */,
 				C4553D622925EC53005400AA /* JejuTaleVoiceView.swift in Sources */,
 				C4553D602925CFE5005400AA /* JejuTaleView.swift in Sources */,
 				C4A9FF02292571F100BCC8CF /* CustomTabView.swift in Sources */,
+				C4553DA6292622D5005400AA /* LoginManger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,3 +12,5 @@ class JejuTaleVoiceViewModel: ObservableObject {
 	@Published var voiceList: [VoiceCell] = []
 	@Published var isActive: [Bool] = []
 }
+
+
