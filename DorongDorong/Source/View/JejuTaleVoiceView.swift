@@ -12,7 +12,11 @@ struct JejuTaleVoiceView: View {
 	@Environment(\.presentationMode) var presentable
 	@ObservedObject var voiceViewModel = JejuTaleVoiceViewModel()
 	@State private var isPlay: Bool = false
-
+	
+	//MARK: Property
+	let screen = Screen.self
+	let widthPadding = 24.0
+	
 	var body: some View {
 		VStack(spacing: 20) {
 			HStack {
@@ -27,6 +31,22 @@ struct JejuTaleVoiceView: View {
 				ForEach(0..<voiceViewModel.voiceList.count, id: \.self) { index in
 					JejuTaleVoiceCellView(voiceViewModel: voiceViewModel, isPlay: $isPlay, info: voiceViewModel.voiceList[index], index: index)
 				}
+				
+				// Last Element
+				Button {
+					
+				} label: {
+					VStack(spacing: 8) {
+						Text("음성 추가하기")
+						
+						Image(systemName: "plus")
+							.resizable()
+							.scaledToFit()
+							.frame(width: 22)
+					}
+				}
+				.foregroundColor(Color(uiColor: .lightGray))
+				.frame(width: screen.maxWidth-(widthPadding*2), height: screen.maxHeight*0.15)
 			}
 		} // VStack
 		.padding()
