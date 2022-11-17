@@ -12,3 +12,9 @@ struct LoginResponse: Decodable {
 	let message: String
 	let accessToken: String
 }
+
+struct JejuStoryVoiceListResponse: Decodable {
+	let code: String
+	let message: String
+	let jejuStoryVoiceList: [JejuStory]
+}

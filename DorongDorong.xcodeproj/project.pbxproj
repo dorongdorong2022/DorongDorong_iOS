@@ -10,7 +10,7 @@
 		51E40F991931F05191814F90 /* Pods_DorongDorong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC149C90798C1B2781E539BF /* Pods_DorongDorong.framework */; };
 		C4553D602925CFE5005400AA /* JejuTaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D5F2925CFE5005400AA /* JejuTaleView.swift */; };
 		C4553D622925EC53005400AA /* JejuTaleVoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D612925EC53005400AA /* JejuTaleVoiceView.swift */; };
-		C4553D652925F265005400AA /* VoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D642925F265005400AA /* VoiceCell.swift */; };
+		C4553D652925F265005400AA /* JejuStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D642925F265005400AA /* JejuStory.swift */; };
 		C4553D68292601EF005400AA /* RecorderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D67292601EF005400AA /* RecorderViewModel.swift */; };
 		C4553D6A292607D0005400AA /* JejuTaleVoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D69292607D0005400AA /* JejuTaleVoiceViewModel.swift */; };
 		C4553D9229261835005400AA /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4553D8629261835005400AA /* Pretendard-Regular.otf */; };
@@ -38,6 +38,7 @@
 		C4553DCA292688AA005400AA /* ModalBackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DC9292688AA005400AA /* ModalBackGround.swift */; };
 		C4553DCC29268C0A005400AA /* Ex+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DCB29268C0A005400AA /* Ex+Alert.swift */; };
 		C4553DCE29269DAF005400AA /* LodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DCD29269DAF005400AA /* LodingView.swift */; };
+		C4553DD02926A498005400AA /* JejuSoundManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DCF2926A498005400AA /* JejuSoundManger.swift */; };
 		C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */; };
 		C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED22924B68300BCC8CF /* ContentView.swift */; };
 		C4A9FED52924B68500BCC8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED42924B68500BCC8CF /* Assets.xcassets */; };
@@ -53,7 +54,7 @@
 		BC149C90798C1B2781E539BF /* Pods_DorongDorong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DorongDorong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4553D5F2925CFE5005400AA /* JejuTaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTaleView.swift; sourceTree = "<group>"; };
 		C4553D612925EC53005400AA /* JejuTaleVoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTaleVoiceView.swift; sourceTree = "<group>"; };
-		C4553D642925F265005400AA /* VoiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCell.swift; sourceTree = "<group>"; };
+		C4553D642925F265005400AA /* JejuStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuStory.swift; sourceTree = "<group>"; };
 		C4553D67292601EF005400AA /* RecorderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewModel.swift; sourceTree = "<group>"; };
 		C4553D69292607D0005400AA /* JejuTaleVoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTaleVoiceViewModel.swift; sourceTree = "<group>"; };
 		C4553D8629261835005400AA /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		C4553DC9292688AA005400AA /* ModalBackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalBackGround.swift; sourceTree = "<group>"; };
 		C4553DCB29268C0A005400AA /* Ex+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Alert.swift"; sourceTree = "<group>"; };
 		C4553DCD29269DAF005400AA /* LodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingView.swift; sourceTree = "<group>"; };
+		C4553DCF2926A498005400AA /* JejuSoundManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuSoundManger.swift; sourceTree = "<group>"; };
 		C4A9FECD2924B68300BCC8CF /* DorongDorong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DorongDorong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorongDorongApp.swift; sourceTree = "<group>"; };
 		C4A9FED22924B68300BCC8CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,7 +126,7 @@
 		C4553D632925F258005400AA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C4553D642925F265005400AA /* VoiceCell.swift */,
+				C4553D642925F265005400AA /* JejuStory.swift */,
 				C4553DA9292629FF005400AA /* Response.swift */,
 				C4553DB529265D6D005400AA /* Song.swift */,
 			);
@@ -166,6 +168,7 @@
 			children = (
 				C4553DA329261FEA005400AA /* APIConstants.swift */,
 				C4553DA5292622D5005400AA /* LoginManger.swift */,
+				C4553DCF2926A498005400AA /* JejuSoundManger.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -398,7 +401,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4553DB429265D4F005400AA /* PlaySongs.swift in Sources */,
-				C4553D652925F265005400AA /* VoiceCell.swift in Sources */,
+				C4553D652925F265005400AA /* JejuStory.swift in Sources */,
+				C4553DD02926A498005400AA /* JejuSoundManger.swift in Sources */,
 				C4553DCC29268C0A005400AA /* Ex+Alert.swift in Sources */,
 				C4553DA429261FEA005400AA /* APIConstants.swift in Sources */,
 				C4A9FF062925726B00BCC8CF /* Constants.swift in Sources */,

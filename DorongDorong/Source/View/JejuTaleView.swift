@@ -29,7 +29,7 @@ struct JejuTaleView: View {
 						.stroke(.white, lineWidth: 1)
 				)
 		}, trailing: NavigationLink(destination: JejuTaleVoiceView()) {
-			Image(systemName: "person.wave.2.fill")
+			Image("voice")
 				.foregroundColor(.white)
 		}.navigationBarBackButtonHidden(true)) // NavigationLink
 	} // VStack

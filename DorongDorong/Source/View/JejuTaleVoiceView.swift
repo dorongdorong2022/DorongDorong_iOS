@@ -80,7 +80,7 @@ struct JejuTaleVoiceCellView: View {
 	//MARK: Property
 	let screen = Screen.self
 	let widthPadding = 24.0
-	var info: VoiceCell
+	var info: JejuStory
 	var index: Int
 	
 	var body: some View {
@@ -90,15 +90,15 @@ struct JejuTaleVoiceCellView: View {
 			}) {
 				VStack {
 					HStack {
-						Text(info.name)
+						Text(info.jejuStoryVoiceNm)
 							.font(.custom("Pretendard-SemiBold", size: 14))
 						Spacer()
-						if info.isSelected {
+						if info.checkYn {
 							Circle()
 								.foregroundColor(.white)
 								.frame(width: 20)
 								.overlay {
-									Image(systemName: info.isSelected ? "checkmark" : "")
+									Image(systemName: info.checkYn ? "checkmark" : "")
 										.resizable()
 										.scaledToFit()
 										.frame(width: 10)

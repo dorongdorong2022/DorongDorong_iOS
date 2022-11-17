@@ -24,8 +24,6 @@ struct ContentView: View {
 					JejuTTSExplainView()
 				case .coach:
 					Color.black
-				default:
-					Color.red
 				}
 				
 				CustomTabView(selection: $tabSelection)

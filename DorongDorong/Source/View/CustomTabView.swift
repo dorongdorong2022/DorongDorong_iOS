@@ -12,7 +12,6 @@ enum Tab {
 	case tale
 	case tts
 	case coach
-	case challenge
 }
 
 struct CustomTabView: View {
@@ -24,28 +23,26 @@ struct CustomTabView: View {
 			Spacer()
 			ZStack {
 				HStack(alignment: .center, spacing: 8) {
-					ForEach(0..<5) { index in
-						Spacer().frame(width: Screen.maxWidth * 0.02)
+					ForEach(0..<4) { index in
+						Spacer().frame(width: Screen.maxWidth * 0.04)
 						
 						Button {
 							switch index {
 							case 0: selection = .sound
 							case 1: selection = .tale
 							case 2: selection = .tts
-							case 3: selection = .coach
-							default: selection = .challenge
+							default: selection = .coach
 							}
 						} label: {
 							switch index {
-							case 0: TabButton(isSelection: selection == .sound, name: "제주소리", systemName: "leaf.fill", systemNameByNotSelected: "leaf")
-							case 1: TabButton(isSelection: selection == .tale, name: "제주설화", systemName: "book.fill", systemNameByNotSelected: "book")
-							case 2: TabButton(isSelection: selection == .tts, name: "보이스", systemName: "mic.fill", systemNameByNotSelected: "mic")
-							case 3: TabButton(isSelection: selection == .coach, name: "태교코칭", systemName: "checkmark.rectangle.portrait.fill", systemNameByNotSelected: "checkmark.rectangle.portrait")
-							default: TabButton(isSelection: selection == .challenge, name: "챌린지", systemName: "flag.fill", systemNameByNotSelected: "flag")
+							case 0: TabButton(isSelection: selection == .sound, name: "제주소리", systemName: "tab1.fill", systemNameByNotSelected: "tab1")
+							case 1: TabButton(isSelection: selection == .tale, name: "제주설화", systemName: "tab2.fill", systemNameByNotSelected: "tab2")
+							case 2: TabButton(isSelection: selection == .tts, name: "보이스", systemName: "tab3.fill", systemNameByNotSelected: "tab3")
+							default: TabButton(isSelection: selection == .coach, name: "챌린지", systemName: "tab4.fill", systemNameByNotSelected: "tab4")
 							}
 						}
 						
-						Spacer().frame(width: Screen.maxWidth * 0.02)
+						Spacer().frame(width: Screen.maxWidth * 0.04)
 					} // HStack
 					.frame(height: Screen.maxHeight * 0.12)
 					.edgesIgnoringSafeArea(.all)
@@ -69,8 +66,10 @@ struct TabButton: View {
 	
 	var body: some View {
 		VStack(spacing: 5) {
-			Image(systemName: isSelection ? systemName : systemNameByNotSelected)
-				.font(.system(size: 24))
+			Image(isSelection ? systemName : systemNameByNotSelected)
+				.resizable()
+				.scaledToFit()
+				.frame(width: 24)
 			Text(name)
 				.font(.custom("Pretendard-Medium", size: 11))
 			Spacer()
