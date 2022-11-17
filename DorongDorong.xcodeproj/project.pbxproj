@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4553D602925CFE5005400AA /* JejuTaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553D5F2925CFE5005400AA /* JejuTaleView.swift */; };
 		C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */; };
 		C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED22924B68300BCC8CF /* ContentView.swift */; };
 		C4A9FED52924B68500BCC8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED42924B68500BCC8CF /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4553D5F2925CFE5005400AA /* JejuTaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuTaleView.swift; sourceTree = "<group>"; };
 		C4A9FECD2924B68300BCC8CF /* DorongDorong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DorongDorong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorongDorongApp.swift; sourceTree = "<group>"; };
 		C4A9FED22924B68300BCC8CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				C4A9FED22924B68300BCC8CF /* ContentView.swift */,
 				C4A9FF01292571F100BCC8CF /* CustomTabView.swift */,
 				C4A9FEFF2925611D00BCC8CF /* JejuSoundView.swift */,
+				C4553D5F2925CFE5005400AA /* JejuTaleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				C4A9FF002925611D00BCC8CF /* JejuSoundView.swift in Sources */,
 				C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */,
 				C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */,
+				C4553D602925CFE5005400AA /* JejuTaleView.swift in Sources */,
 				C4A9FF02292571F100BCC8CF /* CustomTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
