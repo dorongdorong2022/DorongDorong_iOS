@@ -38,7 +38,7 @@ struct JejuSoundView_Previews: PreviewProvider {
 			ZStack {
 				JejuSoundView(presentSheet: .constant(false))
 			}
+			.edgesIgnoringSafeArea(.all)
 		}
-		.edgesIgnoringSafeArea(.all)
 	}
 }

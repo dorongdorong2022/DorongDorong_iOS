@@ -9,8 +9,8 @@ import SwiftUI
 
 struct JejuTaleView: View {
 	//MARK: Property Wrapper
-	@Binding var stack: NavigationPath
-	@Binding var presentSheet: Bool
+	@Binding var stack: NavigationPath	// 이전화면으로
+	@Binding var presentSheet: Bool		// 설화변경 Modal
 	
 	var body: some View {
 		VStack {
@@ -29,22 +29,20 @@ struct JejuTaleView: View {
 					RoundedRectangle(cornerRadius: 6)
 						.stroke(.white, lineWidth: 1)
 				)
-		}, trailing: Button(action: {
-			
-		}) {
+		}, trailing: NavigationLink(destination: EmptyView()) {
 			Image(systemName: "person.wave.2.fill")
 				.foregroundColor(.white)
-		})
+		}.navigationBarBackButtonHidden(true)) // NavigationLink
 	} // VStack
 }
 
 struct JejuTaleView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		NavigationStack {
 			ZStack {
 				JejuTaleView(stack: .constant(NavigationPath()), presentSheet: .constant(false))
 			}
+			.edgesIgnoringSafeArea(.all)
 		}
-		.edgesIgnoringSafeArea(.all)
-    }
+	}
 }
