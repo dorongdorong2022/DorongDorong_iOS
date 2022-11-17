@@ -13,9 +13,9 @@ struct JejuTaleView: View {
 	
 	var body: some View {
 		VStack {
-			Image("sample1")
+			Image("sample")
 				.resizable()
-				.scaledToFill()
+				.scaledToFit()
 		}
 		.navigationBarItems(leading: Button(action: {
 			presentSheet = true // Button action
