@@ -20,7 +20,7 @@ class JejuTaleVoiceViewModel: ObservableObject {
 	}
 	
 	func getList() {
-		AF.request(JejuSoundManger.getJejuSound)
+		AF.request(JejuStoryManager.getJejuSound)
 			.publishDecodable(type: JejuStoryVoiceListResponse.self)
 			.value()
 			.receive(on: DispatchQueue.main)

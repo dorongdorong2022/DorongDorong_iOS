@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-enum JejuSoundManger: URLRequestConvertible {
+enum JejuStoryManager: URLRequestConvertible {
 	
 	case getJejuSound
 

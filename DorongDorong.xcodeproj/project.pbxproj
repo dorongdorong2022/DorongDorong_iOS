@@ -38,7 +38,7 @@
 		C4553DCA292688AA005400AA /* ModalBackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DC9292688AA005400AA /* ModalBackGround.swift */; };
 		C4553DCC29268C0A005400AA /* Ex+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DCB29268C0A005400AA /* Ex+Alert.swift */; };
 		C4553DCE29269DAF005400AA /* LodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DCD29269DAF005400AA /* LodingView.swift */; };
-		C4553DD02926A498005400AA /* JejuSoundManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DCF2926A498005400AA /* JejuSoundManger.swift */; };
+		C4553DD02926A498005400AA /* JejuStoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4553DCF2926A498005400AA /* JejuStoryManager.swift */; };
 		C4A9FED12924B68300BCC8CF /* DorongDorongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */; };
 		C4A9FED32924B68300BCC8CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FED22924B68300BCC8CF /* ContentView.swift */; };
 		C4A9FED52924B68500BCC8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A9FED42924B68500BCC8CF /* Assets.xcassets */; };
@@ -83,7 +83,7 @@
 		C4553DC9292688AA005400AA /* ModalBackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalBackGround.swift; sourceTree = "<group>"; };
 		C4553DCB29268C0A005400AA /* Ex+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Alert.swift"; sourceTree = "<group>"; };
 		C4553DCD29269DAF005400AA /* LodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingView.swift; sourceTree = "<group>"; };
-		C4553DCF2926A498005400AA /* JejuSoundManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuSoundManger.swift; sourceTree = "<group>"; };
+		C4553DCF2926A498005400AA /* JejuStoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuStoryManager.swift; sourceTree = "<group>"; };
 		C4A9FECD2924B68300BCC8CF /* DorongDorong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DorongDorong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A9FED02924B68300BCC8CF /* DorongDorongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorongDorongApp.swift; sourceTree = "<group>"; };
 		C4A9FED22924B68300BCC8CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 			children = (
 				C4553DA329261FEA005400AA /* APIConstants.swift */,
 				C4553DA5292622D5005400AA /* LoginManger.swift */,
-				C4553DCF2926A498005400AA /* JejuSoundManger.swift */,
+				C4553DCF2926A498005400AA /* JejuStoryManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -402,7 +402,7 @@
 			files = (
 				C4553DB429265D4F005400AA /* PlaySongs.swift in Sources */,
 				C4553D652925F265005400AA /* JejuStory.swift in Sources */,
-				C4553DD02926A498005400AA /* JejuSoundManger.swift in Sources */,
+				C4553DD02926A498005400AA /* JejuStoryManager.swift in Sources */,
 				C4553DCC29268C0A005400AA /* Ex+Alert.swift in Sources */,
 				C4553DA429261FEA005400AA /* APIConstants.swift in Sources */,
 				C4A9FF062925726B00BCC8CF /* Constants.swift in Sources */,
