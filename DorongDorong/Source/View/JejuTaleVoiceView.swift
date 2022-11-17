@@ -9,9 +9,10 @@ import SwiftUI
 
 struct JejuTaleVoiceView: View {
 	//MARK: Property Wrapper
+	@Environment(\.presentationMode) var presentable
 	@ObservedObject var voiceViewModel = JejuTaleVoiceViewModel()
 	@State private var isPlay: Bool = false
-	
+
 	var body: some View {
 		VStack(spacing: 20) {
 			HStack {
@@ -30,6 +31,13 @@ struct JejuTaleVoiceView: View {
 		} // VStack
 		.padding()
 		.background(.black)
+		.navigationBarBackButtonHidden(true)
+		.navigationBarItems(leading: Button(action: {
+			presentable.wrappedValue.dismiss()
+		}) {
+			Image(systemName: "chevron.backward")
+				.foregroundColor(.white)
+		})
 	}
 }
 
