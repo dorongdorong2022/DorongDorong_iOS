@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct VoiceCell: Codable, Identifiable {
+	let id: String
+	let name: String
+	let fileLink: String
+	let isSelected: Bool
+}
