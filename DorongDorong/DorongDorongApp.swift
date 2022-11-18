@@ -21,10 +21,7 @@ struct DorongDorongApp: App {
 	
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
-				.onAppear {
-					login.getToken()
-				}
+			SplashView()
 		}
 	}
 }

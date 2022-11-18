@@ -6,16 +6,29 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct JejuTaleVoiceView: View {
 	//MARK: Property Wrapper
 	@Environment(\.presentationMode) var presentable
 	@ObservedObject var voiceViewModel = JejuTaleVoiceViewModel()
 	@State private var isPlay: Bool = false
-	
+	@ObservedObject var audioViewModel = RecorderViewModel(numberOfSamples: 35)
+	@Binding var tabSelection: Tab
+	let player = AVPlayer()
+	let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
 	//MARK: Property
 	let screen = Screen.self
 	let widthPadding = 24.0
+	
+	init(tabSelection: Binding<Tab>) {
+		self._tabSelection = tabSelection
+		let fileUrl = Bundle.main.url(forResource: "voice", withExtension: "mp3")!
+		let playerItem = AVPlayerItem(url: fileUrl)
+		player.replaceCurrentItem(with: playerItem)
+		audioViewModel.startInit(audio: URL(string: "https://dorongdorong.s3.ap-northeast-2.amazonaws.com/file/sound/%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC.wav")!)
+	}
 	
 	var body: some View {
 		VStack(spacing: 38) {
@@ -30,12 +43,12 @@ struct JejuTaleVoiceView: View {
 			ScrollView {
 				LazyVStack(spacing: 21) {
 					ForEach(0..<voiceViewModel.voiceList.count, id: \.self) { index in
-						JejuTaleVoiceCellView(voiceViewModel: voiceViewModel, isPlay: $isPlay, info: voiceViewModel.voiceList[index], index: index)
+						JejuTaleVoiceCellView(audioViewModel: audioViewModel, voiceViewModel: voiceViewModel, isPlay: $isPlay, info: voiceViewModel.voiceList[index], index: index, player: player)
 					}
 					
 					// Last Element
 					Button {
-						
+						tabSelection = .tts
 					} label: {
 						VStack(spacing: 8) {
 							Text("음성 추가하기")
@@ -73,20 +86,22 @@ struct JejuTaleVoiceView: View {
 //MARK: - JejuTaleVoice CellView
 struct JejuTaleVoiceCellView: View {
 	//MARK: Property Wrapper
-	@ObservedObject private var audioRecorder = RecorderViewModel(numberOfSamples: 35)
+	@ObservedObject var audioViewModel: RecorderViewModel
+	@ObservedObject var audioRecorder = RecorderViewModel(numberOfSamples: 35)
 	@ObservedObject var voiceViewModel: JejuTaleVoiceViewModel
 	@Binding var isPlay: Bool
 	
 	//MARK: Property
 	let screen = Screen.self
 	let widthPadding = 24.0
-	var info: JejuStory
+	var info: JejuVoice
 	var index: Int
-	
+	let player: AVPlayer
+
 	var body: some View {
 		ZStack {
 			Button(action: {
-				voiceViewModel.isActive[index].toggle()
+				voiceViewModel.voiceList[index].checkYn.toggle()
 			}) {
 				VStack {
 					HStack {
@@ -112,7 +127,7 @@ struct JejuTaleVoiceCellView: View {
 						}
 					} // HStack
 					.foregroundColor(.white)
-					.padding([.leading, .top, .trailing], 22)
+					.padding(22)
 					
 					HStack(spacing: 22) {
 						Button {
@@ -127,7 +142,7 @@ struct JejuTaleVoiceCellView: View {
 						}
 						
 						HStack(alignment: .center, spacing: 4) {
-							ForEach(self.audioRecorder.soundSamples, id: \.self) { step in
+							ForEach(self.audioViewModel.soundSamples, id: \.self) { step in
 								JejuTaleVoiceCellBarView(isStep: step)
 							}
 						} // HStack
@@ -140,6 +155,13 @@ struct JejuTaleVoiceCellView: View {
 			.cornerRadius(10)
 			
 			Button {
+				
+				if isPlay {
+					player.pause()
+				} else {
+					player.play()
+				}
+				
 				isPlay.toggle()
 			} label: {
 				Image(systemName: isPlay ? "play.circle.fill" : "play.circle")
@@ -169,7 +191,7 @@ struct JejuTaleVoiceView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
 			ZStack {
-				JejuTaleVoiceView()
+				JejuTaleVoiceView(tabSelection: .constant(.sound))
 			}
 		}
 	}

@@ -29,7 +29,6 @@ struct JejuTTSRegisterView: View {
 						.bold()
 						.foregroundColor(.white)
 					Spacer()
-					
 				} // HStack
 				.padding(.bottom, 40)
 				

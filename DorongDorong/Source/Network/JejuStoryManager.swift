@@ -7,21 +7,21 @@
 
 import Foundation
 import Alamofire
+import Combine
 
 enum JejuStoryManager: URLRequestConvertible {
-	
-	case getJejuSound
+	case getJejuStory
 
 	var baseURL: URL {
 		switch self {
-		case .getJejuSound:
-			return URL(string: "\(APIConstants.url)​/jejustoryvoice/select/list/all")!
+		case .getJejuStory:
+			return URL(string: "\(APIConstants.url)/jejustory/select/list/10")!
 		}
 	}
 	
 	var method: HTTPMethod {
 		switch self {
-		case .getJejuSound:
+		case .getJejuStory:
 			return .get
 		}
 	}

@@ -10,7 +10,7 @@ import Combine
 import Alamofire
 
 class JejuTaleVoiceViewModel: ObservableObject {
-	@Published var voiceList: [JejuStory] = []
+	@Published var voiceList: [JejuVoice] = []
 	@Published var isActive: [Bool] = []
 	
 	private var subscription = Set<AnyCancellable>()    // disposeBag
@@ -20,8 +20,8 @@ class JejuTaleVoiceViewModel: ObservableObject {
 	}
 	
 	func getList() {
-		AF.request(JejuStoryManager.getJejuSound)
-			.publishDecodable(type: JejuStoryVoiceListResponse.self)
+		AF.request(JejuVoiceManager.getJejuVoice)
+			.publishDecodable(type: JejuVoiceListResponse.self)
 			.value()
 			.receive(on: DispatchQueue.main)
 			.sink(
@@ -40,6 +40,7 @@ class JejuTaleVoiceViewModel: ObservableObject {
 				receiveValue: { receivedValue in
 					print("받은 값 : \(receivedValue)")
 					self.voiceList = receivedValue.jejuStoryVoiceList
+					self.isActive = [Bool](repeating: false, count: self.voiceList.count)
 				}
 			)
 			.store(in: &subscription)  // disposed(by: disposeBag)

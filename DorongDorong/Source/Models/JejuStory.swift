@@ -7,12 +7,10 @@
 
 import Foundation
 
-struct JejuStory: Codable, Identifiable {
-	var id = UUID()
-	let jejuStoryVoiceSeqNo: Int
-	let jejuStoryVoiceNm: String
-	let jejuStoryVoiceNo: String
-	let jejuStoryVoiceUrl: String
-	var userNo: String
-	var checkYn: Bool
+struct JejuStory: Decodable {
+	let jejuStoryNo: String
+	let jejuStoryImgUrl: String
+	let jejuStoryThumbnailImgUrl: String
+	let jejuStoryTitle: String
+	let jejuStoryTxt: String
 }

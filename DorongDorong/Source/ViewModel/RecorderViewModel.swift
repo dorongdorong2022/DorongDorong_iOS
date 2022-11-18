@@ -64,7 +64,7 @@ class RecorderViewModel: NSObject, ObservableObject {
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = "YYYY-MM-dd 녹음"
 		
-		self.url = documentPath.appendingPathComponent("\(dateFormatter.string(from: Date())).m4a")
+		self.url = documentPath.appendingPathComponent("\(dateFormatter.string(from: Date())).mp4")
 		
 		do {
 			audioRecorder = try AVAudioRecorder(url: self.url!, settings: recorderSettings)
@@ -183,15 +183,15 @@ extension RecorderViewModel: AVAudioPlayerDelegate {
 	func playMonitoring() {
 		audioPlayer.isMeteringEnabled = true
 		audioPlayer.play()
-		
+
 		timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [self] (timer) in
 			self.audioPlayer.updateMeters()
-			
+
 			self.currentStepbar = normalizeSoundLevel(level: Float(averagePowerFromAllChannels())) // 음성의 level의 크기에 따라
 			self.soundSamples = [Bool](repeating: true, count: currentStepbar) + [Bool](repeating: false, count:  self.numberOfStepbar - currentStepbar)
-			
+
 			self.time += 1
-			
+
 			self.microSeconds = Int(self.time) % 100
 			self.seconds = Int(self.time * 0.01) % 60
 			self.minutes = (Int(self.time * 0.01) / 60) % 60

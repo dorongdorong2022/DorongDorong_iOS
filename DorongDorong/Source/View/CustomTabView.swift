@@ -8,9 +8,9 @@
 import SwiftUI
 
 enum Tab {
-	case sound
-	case tale
 	case tts
+	case tale
+	case sound
 	case coach
 }
 
@@ -28,16 +28,17 @@ struct CustomTabView: View {
 						
 						Button {
 							switch index {
-							case 0: selection = .sound
+							case 0: selection = .tts
 							case 1: selection = .tale
-							case 2: selection = .tts
+							case 2: selection = .sound
 							default: selection = .coach
 							}
 						} label: {
 							switch index {
-							case 0: TabButton(isSelection: selection == .sound, name: "제주소리", systemName: "tab1.fill", systemNameByNotSelected: "tab1")
-							case 1: TabButton(isSelection: selection == .tale, name: "제주설화", systemName: "tab2.fill", systemNameByNotSelected: "tab2")
-							case 2: TabButton(isSelection: selection == .tts, name: "보이스", systemName: "tab3.fill", systemNameByNotSelected: "tab3")
+							case 0: TabButton(isSelection: selection == .tts, name: "보이스", systemName: "tab3.fill", systemNameByNotSelected: "tab3")
+							case 1:
+								TabButton(isSelection: selection == .tale, name: "제주설화", systemName: "tab2.fill", systemNameByNotSelected: "tab2")
+							case 2: TabButton(isSelection: selection == .sound, name: "제주소리", systemName: "tab1.fill", systemNameByNotSelected: "tab1")
 							default: TabButton(isSelection: selection == .coach, name: "챌린지", systemName: "tab4.fill", systemNameByNotSelected: "tab4")
 							}
 						}

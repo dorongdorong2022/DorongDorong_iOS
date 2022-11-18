@@ -13,8 +13,20 @@ struct LoginResponse: Decodable {
 	let accessToken: String
 }
 
-struct JejuStoryVoiceListResponse: Decodable {
+struct JejuStoryListResponse: Decodable {
 	let code: String
 	let message: String
-	let jejuStoryVoiceList: [JejuStory]
+	let jejuStoryList: [JejuStory]
+}
+
+struct JejuSoundListResponse: Decodable {
+	let code: String
+	let message: String
+	let jejuSoundList: [JejuSound]
+}
+
+struct JejuVoiceListResponse: Decodable {
+	let code: String
+	let message: String
+	let jejuStoryVoiceList: [JejuVoice]
 }

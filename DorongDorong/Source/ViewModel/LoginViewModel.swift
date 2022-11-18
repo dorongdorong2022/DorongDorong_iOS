@@ -13,6 +13,10 @@ import SwiftKeychainWrapper
 class LoginViewModel: ObservableObject {
 	private var subscription = Set<AnyCancellable>()    // disposeBag
 
+	init() {
+		getToken()
+	}
+	
 	func getToken() {
 		AF.request(LoginManger.postLogin)
 			.publishDecodable(type: LoginResponse.self)

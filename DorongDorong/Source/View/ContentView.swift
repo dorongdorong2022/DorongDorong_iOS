@@ -9,33 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
 	//MARK: Property Wrapper
-	@State private var tabSelection: Tab = .sound
+	@State private var tabSelection: Tab = .tts
 	@State private var presentSheet = false
 
 	var body: some View {
 		NavigationView {
 			ZStack {
 				switch tabSelection {
-				case .sound:
-					JejuSoundView(presentSheet: $presentSheet)
-				case .tale:
-					JejuTaleView(presentSheet: $presentSheet)
 				case .tts:
 					JejuTTSExplainView()
+				case .tale:
+					JejuTaleView(tabSelection: $tabSelection)
+				case .sound:
+					JejuSoundView()
 				case .coach:
-					Color.black
+					JejuCoachView()
 				}
 				
 				CustomTabView(selection: $tabSelection)
 			} // ZStack
 			.edgesIgnoringSafeArea(.all)
-			.sheet(isPresented: $presentSheet) {
-				ZStack {
-					Color.white
-					Text("Detail")
-				}
-				.edgesIgnoringSafeArea(.bottom)
-			}
 		}
 	}
 }
