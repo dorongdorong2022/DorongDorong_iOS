@@ -87,11 +87,11 @@
 실제 앱 구동화면입니다
 </Blockquote>
 
-| ![register](./image/register.gif) | ![generalLogin](./image/userLogin.gif) | ![adminLogin](./image/admin.gif) | ![autoLogin](./image/autoLogin.gif) |
+| ![splash](./image/splash.gif) | ![tts_step_1](./image/tts_step_1.gif) | ![tts_step_2](./image/tts_step_2.gif) | |
 | :-: | :-: | :-: | :-: |
-| 회원가입 페이지 | 일반유저 로그인 | 관리자 로그인 | 자동 로그인 |
-| ![blockedLogin](./image/blockedUser.gif) | ![personalMemo](./image/addMemo.gif) | ![accountEditing](./image/editAccount.gif) | ![gesture](./image/tapGesture.gif) |
-| 차단유저 로그인  | 개인 메모 작성 | 개인정보 수정 | 탭제스처 인식 |
+| 스플래쉬 | TTS 등록1 | TTS 등록2 |  |
+| ![story](./image/story.gif) | ![voice_add](./image/voice_add.gif) | ![sound](./image/sound.gif) | ![coach](./image/coach.gif) |
+| 제주 설화  | 목소리 선택/등록 | 제주 소리 | 태교 코칭 |
 <br/>
 
 ## 🏃 Intallation
