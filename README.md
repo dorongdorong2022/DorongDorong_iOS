@@ -129,6 +129,35 @@
 <br/>
 
 ## 🔥 Technical Achievements
+### iOS 사이드
+- TTS 등록을 위한 자동으로 글이 넘어가는 방식
+  ```swift
+  Lyric(lyric: "햇살도 둥글둥글하게 뭉치는 맑은 날", isBlur: true, isEnd: false, time: 4)
+  ```
+  가사(글)을 Model화시킨 후, `.onReceive`와 `timer(Timer.publish)`를 통해 시간 계산후, view를 update 했습니다.
+
+- 서버에서 받은 음성을 비동기 처리하는 과정
+  AVAudioPlaye를 `play()`하기 전에 서버에서 받아온 `URL`를 Data로 변경하고 `Data`를 `AVAudioPlayer(data: data)`를 통해 초기화해야합니다.
+  ```swift
+  DispatchQueue.global().async {
+    do {
+      let data = try Data(contentsOf: audio)
+      DispatchQueue.main.async {
+        do {
+          self.audioPlayer = try AVAudioPlayer(data: data)
+          self.audioPlayer.delegate = self
+        } catch {
+          print("재생 실패")
+        }
+      }
+    } catch {
+      print("m4a Data화 실패")
+    }
+  }
+  ```
+  를 통해 값을 초기화 처리했습니다.<br/>
+  또한, View 전환시 onAppear, onDisappear 통해 값을 초기화하고, 등록하는 과정을 거쳤습니다.
+<br/>
 
 ## 👣 Review
 - PM : 우리팀 디자이너 (진)카카오
