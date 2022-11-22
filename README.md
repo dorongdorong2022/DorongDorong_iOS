@@ -146,6 +146,7 @@
         do {
           self.audioPlayer = try AVAudioPlayer(data: data)
           self.audioPlayer.delegate = self
+          self.audioPlayer.play()
         } catch {
           print("재생 실패")
         }
