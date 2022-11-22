@@ -38,7 +38,7 @@
       </tr>
       <tr>
           <td align="center">우승우(PM)</td>
-          <td align="center">전예진(Design)</td>
+          <td align="center">전예진(Designer)</td>
           <td align="center">김건형(iOS)</td>
           <td align="center">조윤환(AOS)</td>
           <td align="center">최선필(BE)</td>
@@ -133,6 +133,6 @@
 ## 👣 Review
 - PM : 우리팀 디자이너 (진)카카오
 - Designer : 여러분~! 너무 고생많으셨고 제 디자인 좋아해주시고, 움직여 주셔서 감사합니다 😀!
+- iOS(me) : 내가 대상탄다 했지!!
 - AOS : 구글과 애플이 뭉치면 세상을 지배한다!
 - BE : 우리 모두 앞으로도 이 기억으로 파이팅!
-- iOS(me) : 내가 대상탄다 했지!!
