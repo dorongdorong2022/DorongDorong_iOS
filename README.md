@@ -1,4 +1,4 @@
-# DorongDorong
+# DorongDorong - 대상 🏆
 <img src="https://img.shields.io/badge/SwiftUI-0052CC?logo=Swift&logoColor=white"/></a>&nbsp;
 <img src="https://img.shields.io/badge/Combine-0052CC?logo=Swift&logoColor=white"/></a>&nbsp;
 ![Xcode](https://img.shields.io/badge/xcode-v14.1-blue?logo=xcode)
