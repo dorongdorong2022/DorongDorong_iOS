@@ -134,10 +134,14 @@
   ```swift
   Lyric(lyric: "햇살도 둥글둥글하게 뭉치는 맑은 날", isBlur: true, isEnd: false, time: 4)
   ```
-  가사(글)을 Model화시킨 후, `.onReceive`와 `timer(Timer.publish)`를 통해 시간 계산후, view를 update 했습니다.
+  가사(글)을 Model화시킨 후, `.onReceive`와 `timer(Timer.publish)`를 통해 시간 계산후, view를 update
+  
+- **Authorization, Error Handling**에 대한 객체를 분리하여 역할을 분리
+
+- **RecorderViewModel**를 만들어 오디오를 처리하는 객체를 분리하여 역할을 분리
 
 - 서버에서 받은 음성을 비동기 처리하는 과정
-  AVAudioPlaye를 `play()`하기 전에 서버에서 받아온 `URL`를 Data로 변경하고 `Data`를 `AVAudioPlayer(data: data)`를 통해 초기화해야합니다.
+  AVAudioPlaye를 `play()`하기 전에 서버에서 받아온 `URL`를 Data로 변경하고 `Data`를 `AVAudioPlayer(data: data)`를 통해 초기화
   ```swift
   DispatchQueue.global().async {
     do {
@@ -156,8 +160,13 @@
     }
   }
   ```
-  를 통해 값을 초기화 처리했습니다.<br/>
-  또한, View 전환시 onAppear, onDisappear 통해 값을 초기화하고, 등록하는 과정을 거쳤습니다.
+  View 전환시 onAppear, onDisappear 통해 값을 초기화하고, 등록하는 과정을 거쳤습니다.
+
+### 아쉬운점
+- TTS의 기술중 Mix Voice API를 **비용 및 보안상의 이유로** 적용하지 못한점 - KT AI Voice, 네이버 Clova Voice, AWS Polly 등
+- 직관적인 코드를 위해 SwiftUI의 **Task**, **await**를 적극 활용하여 **비동기 처리**를 하지 못한점
+- Clean Code를 위해 **의미 /** **유형별**로 나눠 **최소 단위**로 Commit을 했지만, 해커톤 마감시간으로 인해 끝까지 나누어 Commit하지 못한점
+- PM과 Designer가 만든 **5번째 Tab**(클라우드 펀딩 - 챌리지 Tab)을 시간 내에 구현하지 못한점
 <br/>
 
 ## 👣 Review
